@@ -1,11 +1,22 @@
 ﻿using System;
 namespace ConsoleApp1
 {
+    
     public class Program
     {
         static void Main(string[] args)
         {
-            Rular rular = new Rular(10);
+            // {    2023.01.05.     Add new featur user input / Beta
+            string userInput = string.Empty;
+            Console.WriteLine("This program convert Cm to Inch");
+            Console.Write("Input Cm value: ");
+            userInput= Console.ReadLine();
+
+            int cmInput = 0;
+            int.TryParse(userInput, out cmInput);
+
+            Rular rular = new Rular(cmInput);
+            // {    2023.01.05.     Add new featur user input / Beta
             rular.Run();
         }   //Main
     }   //Program
